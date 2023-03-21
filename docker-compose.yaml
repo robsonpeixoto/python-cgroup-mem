@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  df:
+    build: .
+    volumes:
+      - ./src:/app
+      - ./data:/data
+    command: ["python3", "/app/main.py"]
+    deploy:
+      resources:
+        limits:
+          memory: 1Gb
+
